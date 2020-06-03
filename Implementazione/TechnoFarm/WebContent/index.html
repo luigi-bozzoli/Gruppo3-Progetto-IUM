@@ -14,16 +14,16 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+<link href="https://www.cropin.com/wp-content/themes/bonoboz/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="styleSheets/headerFooter.css" rel="stylesheet"/>
+<link href="styleSheets/homeStyle.css" rel="stylesheet"/>
 
-<link href="file:///C:/Users/faded/Desktop/headerFooter.css" rel="stylesheet"/>
-<link href="file:///C:/Users/faded/Desktop/homeStyle.css" rel="stylesheet"/>
-
-<title>PharmaÉlite</title>
+<title>TechnoFarm</title>
 </head>
 
 <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav id = "header" class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 
 			<div class="navbar-header">
@@ -33,34 +33,19 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a id="logo" class="navbar-brand"><img id="immagineLogo" class="img-rounded"
-					src="Immagini/logo.PNG" alt="logo"></a>
+				<a id="logo" class="navbar-brand" href="index.html"><img id="immagineLogo" class="img-rounded"
+					src="https://i.ibb.co/bFP8XmC/Logo2.png" alt="logo"></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="navbar-collapse-main">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a class="vociMenu" href="home.html"> <i
-							class="fas fa-home"></i>
-					</a></li>
-					<li><a class="vociMenu" href="Userpage"> <i class="fas fa-user"></i>
-					</a></li>
-					<li><a class="vociMenu" href="Carrello"> <i
-							class="fas fa-shopping-cart"></i>
+					<li>
+					<a onclick="return openForm()" title="SIGN-IN" style="color: #F5DEB3" class="vociMenu" href="#"><i class="fas fa-user-lock"></i> </a>
+					</li>				
+					<li><a title="SIGN-UP" style="color: #F5DEB3" class="vociMenu" href="#"> <i class="fas fa-user-plus"></i>
 					</a></li>
 				</ul>
 
-				<form id="form" class="navbar-form navbar-left"
-					action="CercaProdotto">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search"
-							name="search">
-						<div class="input-group-btn">
-							<button class="btn btn-default" type="submit">
-								<i class="glyphicon glyphicon-search"></i>
-							</button>
-						</div>
-					</div>
-				</form>
 
 			</div>
 		</div>
@@ -83,17 +68,17 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				<div class="item active"
-					style="background-image: url(Immagini/Immagine1.jpeg);">
+					style="background-image: url(https://katanaproject.eu/wp-content/uploads/2017/10/AugCurated_1200x630_Technology.jpg);">
 					<div class="carousel-caption">
 					</div>
 				</div>
 
 				<div class="item"
-					style="background-image: url(Immagini/Immagine2.jpeg);">
+					style="background-image: url(https://iadsb.tmgrup.com.tr/d4b8bf/1200/627/0/30/1000/553?u=https://idsb.tmgrup.com.tr/2019/11/22/1574427765659.jpg);">
 				</div>
 
 				<div class="item"
-					style="background-image: url(Immagini/Immagine3.jpeg)">
+					style="background-image: url(https://www.souriau.com/sites/default/files/application/image/cover-image-smart-agri-min.jpg)">
 				</div>
 			</div>
 
@@ -109,140 +94,69 @@
 		</div>
 	</div>
 
-	<!-- categorie -->
-	<div id="categorie" class="container">
-		<div class="row" >
-			<div class="col-sm-3">
-
-				<div class="card" >
-
-					<img class="card-img-bottom" src="Immagini/Erboristeria.jpg"
-						alt="Card image" >
-					<div class="card-body">
-
-						<div class="bottoneCategoria text-center">
-							<form action="ListaProdottiCategorie" method="post">
-								 <input type="hidden" name="categoria" value="Erboristeria">
-							  	<button type="submit" class="btn btn-success">Erboristeria</button>
-							</form>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="col-sm-3">
-				<div class="card" >
-
-					<img class="card-img-bottom" src="Immagini/farmacibanco.jpg"
-						alt="Card image" >
-					<div class="card-body">
-						<div class="bottoneCategoria text-center">
-							<form action="ListaProdottiCategorie" method="post">
-								 <input type="hidden" name="categoria" value="farmaci da banco">
-							  	<button type="submit" class="btn btn-success">Farmaci da banco</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3">
-				<div class="card" >
-
-					<img class="card-img-bottom" src="Immagini/integratori.jpg"
-						alt="Card image" >
-					<div class="card-body">
-						<div class="bottoneCategoria text-center">
-							<form action="ListaProdottiCategorie" method="post">
-								 <input type="hidden" name="categoria" value="Integratori">
-							  	<button type="submit" class="btn btn-success">Integratori</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3">
-				<div class="card">
-
-					<img class="card-img-bottom" src="Immagini/igieneOrale.jpeg"
-						alt="Card image" >
-					<div class="card-body">
-						<div class="bottoneCategoria text-center">
-							<form action="ListaProdottiCategorie" method="post">
-								 <input type="hidden" name="categoria" value="Igiene orale">
-							  	<button type="submit" class="btn btn-success">Igiene Orale</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
 
 	<!--informazioni -->
 
-	<div id="info" class="row">
-		<div class="col-sm-4 text-center">
-			<h2>
-				<span class="badge badge-secondary"> Ritiro gratuito in
-					farmacia </span> <i class="fas fa-store-alt"></i>
-			</h2>
-		</div>
-
-		<div class="col-sm-4 text-center">
-			<h2>
-				<span class="badge badge-secondary"> Spedizione gratuita per ordini superiori a 49€</span> <i class="fas fa-truck"></i>
-			</h2>
-		</div>
-
-		<div class="col-sm-4 text-center">
-			<h2>
-				<span class="badge badge-secondary"> Spedizioni rapida</span> <i
-					class="fas fa-shipping-fast"></i>
-			</h2>
-		</div>
-	</div>
 
 
 
 
 		<div id="descrizione" class="container" style="font-size: 18px;">
-		<b>	PharmaÉlite </b>, la migliore farmacia online, anche vicino a te
+Lo <b>Smart Farming</b> si concentra sull'uso dei dati acquisiti attraverso varie fonti (storiche, geografiche e strumentali) nella gestione delle attività agricole. I sistemi cosiddetti smart si differenziano per la loro capacità di registrare dati e ricavare informazioni da essi. Utilizzando hardware (IoT) e software (SaaS) per acquisire  dati e fornire informazioni utili per gestire tutte le operazioni in azienda, sia prima che dopo il raccolto. I dati saranno poi organizzati, accessibili in qualsiasi momento comodamente dal proprio dispositivo. Il nostro applicativo TechnoFarm ti garantisce tutto questo ma con l’ulteriore possibilità di effetuare operazioni automatiche all’interno della tua serra in base ai dati acquisiti. 
+</div>
+		
 
-	Su <b>PharmaÉlite </b> puoi acquistare online i tuoi prodotti preferiti. Inoltre scopri i nostri servizi nelle farmacie fisiche: esame del sangue e delle urine, test della glicemia e per le intolleranze alimentari, elettrocardiogamma...
+<div class="background">
+  <div id="tabella" class="container">
+    <div class="panel pricing-table">
+      
+      <div class="pricing-plan">
 
-	Ogni settimana troverai nuovi prodotti per la bellezza e il benessere di tutta la famiglia: scegli tra migliaia di parafarmaci, farmaci da banco,  integratori, prodotti erboristici.
-
-	Ti offriamo un servizio conveniente e professionale: acquista online in tutta sicurezza e ricevi il tuo ordine a casa o in farmacia in 24/72 ore. La spedizione a domicilio è gratis per ordini superiori a 49€, mentre il ritiro in farmacia è sempre gratuito!
-	</div>
-
-
+        <img src="https://i.ibb.co/Jrpc10r/17.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Agricoltura tradizionale</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Stesse pratiche di coltivazione in tutta la regione</li>
+          <li class="pricing-features-item">Geolocalizzazione non possibile</li>
+          <li class="pricing-features-item">Raccolta manuale dei dati</li>
+        </ul>
+      </div>
+      
+      <div class="pricing-plan">
+        <img src="https://i.ibb.co/V2ByHYJ/18.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Smart farming</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Riduzione del carico di lavoro</li>
+          <li class="pricing-features-item">Diminuzione costi di gestione</li>
+          <li class="pricing-features-item">Raccolta automatica dei dati</li>
+          <li class="pricing-features-item">Gestione della serra in tempo reale</li>
+        </ul>
+      </div>
+      
+  </div>
+  </div>
+</div>
 
 	<!-- Footer-->
 	<footer class="footer container-fluid text-center">
 
-		<p>PHARMAELITE v. 21.0.0 - LAL SRL con sede legale a New York</p>
+		<p>TECHNOFARM v. 21.0.0 - LAL SRL con sede legale a New York</p>
 		<hr />
 		<div class="container">
 			<div class="row">
-				<div class="payments col-md-4">
-					<span>Pagamenti sicuri </span> <br> <img
-						src="Immagini/footer-payment.svg">
+				<div style="height:90px;" class="payments col-md-4">
+					<span>Contact us: support@Technofarm.com</span>
 				</div>
 
 				<div class="shipping  col-md-4">
-					<span>Spedizioni rapide</span> <br> <img
-						src="Immagini/footer-shipping.svg">
+					<span>© Copyright 2018 Dynamic Drive. All Rights Reserved.</span>
 				</div>
 
 				<div class="social col-md-4">
 					<span>Seguici:</span> <a class="btn btn-social-icon btn-instagram">
-						<span class="fa fa-instagram"></span>
-					</a> <a class="btn btn-social-icon btn-facebook"> <span
+						<span style="color: #000000" class="fa fa-instagram"></span>
+					</a> <a class="btn btn-social-icon btn-facebook"> <span style="color: #000000"
 						class="fa fa-facebook"></span>
 					</a>
 
@@ -253,7 +167,33 @@
 
 	</footer>
 
+<!-- SCRIPT -->
+<button class="open-button" onclick="openForm()">Open Form</button>
 
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
 
 
 </body>
