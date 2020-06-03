@@ -13,8 +13,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-<link href="https://www.cropin.com/wp-content/themes/bonoboz/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
 <link href="styleSheets/headerFooter.css" rel="stylesheet"/>
 <link href="styleSheets/homeStyle.css" rel="stylesheet"/>
 
@@ -22,6 +21,47 @@
 </head>
 
 <body>
+
+
+<!-- LOGIN -->
+<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input id="email" type="email" id="defaultForm-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input id="password" type="password" id="defaultForm-pass" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-pass">Password</label>
+        </div>
+        
+        <div><h3 id="errore"></h3></div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button onclick="return validateForm()" class="btn btn-default">Sign in</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FINE LOGIN -->
+
+<!-- REGISTRAZIONE -->
+
+<!-- FINE REGISTRAZIONE -->
+
 
 	<nav id = "header" class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -40,7 +80,7 @@
 			<div class="collapse navbar-collapse" id="navbar-collapse-main">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-					<a onclick="return openForm()" title="SIGN-IN" style="color: #F5DEB3" class="vociMenu" href="#"><i class="fas fa-user-lock"></i> </a>
+					<a title="SIGN-IN" style="color: #F5DEB3" class="vociMenu" href="#" data-toggle="modal" data-target="#modalLoginForm"><i class="fas fa-user-lock"></i> </a>
 					</li>				
 					<li><a title="SIGN-UP" style="color: #F5DEB3" class="vociMenu" href="#"> <i class="fas fa-user-plus"></i>
 					</a></li>
@@ -167,34 +207,8 @@ Lo <b>Smart Farming</b> si concentra sull'uso dei dati acquisiti attraverso vari
 
 	</footer>
 
-<!-- SCRIPT -->
-<button class="open-button" onclick="openForm()">Open Form</button>
-
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
-
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-
-
+<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="scripts/login.js"></script>
 </body>
 </html>
