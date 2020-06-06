@@ -44,7 +44,7 @@ body {
 }
 
 
-.social{
+.social, .payments, .shipping{
 	height: 90px;
 }
 
@@ -93,12 +93,13 @@ html {
 
 .container {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1200px;
   width: 100%;
 }
 
 #tabella{
 	padding: 50px 0 0;
+	  max-width: 960px;
 }
 
 .panel {
