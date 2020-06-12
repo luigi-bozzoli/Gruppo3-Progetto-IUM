@@ -15,12 +15,16 @@ function controlla(){
     verificaEmail();
     verificaPassword();
     verificaPassword2();
+    
+    if(bemail && bpassword && reppassword)
+    	location.replace("userPage.html");
 }
 
 function verificaEmail()
 {
-    var email=$("input[name=email]").val();
-    if(email.length==0){
+    var email = $("#defaultForm-email1").val();
+   
+    if(email.length == 0){
         avviso("erroreRegmail","Il campo è obbligatorio");
         bemail= false;
         return;
@@ -40,7 +44,7 @@ function verificaEmail()
 function verificaPassword()
 {
 
-    var pass=$("input[name=password]").val();
+    var pass=$("#defaultForm-pass1").val();
     if(pass.length==0){
         avviso("erroreRegpass","Il campo non può essere nullo");
         bpassword= false;
@@ -65,12 +69,13 @@ function verificaPassword()
 
 function verificaPassword2()
 {
-    var pass=$("input[name=defaultForm-password]").val();
-    var pass2=$("input[name=defaultForm-password2]").val();
-    if(String(pass).match(pass2)){
-        bpassword=true;
+    var pass=$("#defaultForm-pass1").val();
+    var pass2=$("#defaultForm-pass2").val();
+    if(pass == pass2){
+    	reppassword=true;
+       
     }else{
         avviso("erroreRegpass2","La password non corrisponde");
-        bpassword=false;
+        reppassword=false;
     }
 }

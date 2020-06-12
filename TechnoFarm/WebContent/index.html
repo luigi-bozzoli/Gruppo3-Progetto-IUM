@@ -72,27 +72,29 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <i class="fas fa-envelope prefix grey-text"></i>
-          <input id="email" type="email" id="defaultForm-email" class="form-control validate">
+          <input type="email" id="defaultForm-email1" class="form-control validate">
           <label data-error="wrong" data-success="right" for="defaultForm-email">Email</label>
         </div>
+        <div><h3 style="color: red;" id="erroreRegmail"></h3></div>
 
         <div class="md-form mb-4">
           <i class="fas fa-lock prefix grey-text"></i>
-          <input id="password" type="password" id="defaultForm-pass" class="form-control validate">
+          <input type="password" id="defaultForm-pass1" class="form-control validate">
           <label data-error="wrong" data-success="right" for="defaultForm-pass">Password</label>
         </div>
+         <div><h3 style="color: red;" id="erroreRegpass"></h3></div>
         
         <div class="md-form mb-4">
           <i class="fas fa-lock prefix grey-text"></i>
-          <input id="password" type="password" id="defaultForm-pass" class="form-control validate">
+          <input type="password" id="defaultForm-pass2" class="form-control validate">
           <label data-error="wrong" data-success="right" for="defaultForm-pass">Ripeti Password</label>
         </div>
         
-        <div><h3 style="color: red;" id="erroreRegistrazione"></h3></div>
+          <div><h3 style="color: red;" id="erroreRegpass2"></h3></div>
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button onclick="validateForm()" class="btn btn-default">Sign up</button>
+        <button onclick="validateForm(controlla())" class="btn btn-default">Sign up</button>
       </div>
     </div>
   </div>
