@@ -13,45 +13,155 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	
-<link href="styleSheets/headerFooter.css" rel="stylesheet"/>
-<link href="styleSheets/homeStyle.css" rel="stylesheet"/>
 
+<link href="styleSheets/headerFooter.css" rel="stylesheet" />
+<link href="styleSheets/homeStyle.css" rel="stylesheet" />
+<link
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="styleSheets/headerFooter.css" rel="stylesheet" />
+<link href="styleSheets/homeStyle.css" rel="stylesheet" />
+<link href="styleSheets/userpage.css" rel="stylesheet" />
 <title>TechnoFarm</title>
 </head>
 
-<body>
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<body style="padding-top: 150px;">
 
-            <div class="container">    
-                  <div class="row">
-                      <div class="panel panel-default">
-                      <div class="panel-heading">  <h4 >User Profile</h4></div>
-                       <div class="panel-body">
-                      <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                       <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
-                     
-                 
-                      </div>
-                      <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8" >
-                          <div class="container" >
-                            <h2>John Doe</h2>
-                            <p>an   <b> Employee</b></p>
-                          
-                           
-                          </div>
-                           <hr>
-                          <ul class="container details" >
-                            <li><p><span class="glyphicon glyphicon-user one" style="width:50px;"></span>i.rudberg</p></li>
-                            <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>somerandom@email.com</p></li>
-                          </ul>
-                          <hr>
-                          <div class="col-sm-5 col-xs-6 tital " >Date Of Joining: 15 Jun 2016</div>
-                      </div>
-                </div>
-            </div>
-            </div>
-            </body>
+
+	<nav id="header" class="navbar navbar-default navbar-fixed-top"
+		role="navigation">
+		<div class="container">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#navbar-collapse-main">
+					<span class="sr-only"> Toggle navigation </span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a id="logo" class="navbar-brand" href="index.html"><img
+					id="immagineLogo" class="img-rounded"
+					src="https://i.ibb.co/bFP8XmC/Logo2.png" alt="logo"></a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-main">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a title="SIGN-IN" style="color: #F5DEB3" class="vociMenu"
+						href="#" data-toggle="modal" data-target="#modalLoginForm"><i
+							class="fas fa-user-lock"></i> </a></li>
+					<li><a title="SIGN-UP" style="color: #F5DEB3" class="vociMenu"
+						href="#" data-toggle="modal" data-target="#modalRegistrazioneForm">
+							<i class="fas fa-user-plus"></i>
+					</a></li>
+				</ul>
+
+
+			</div>
+		</div>
+
+	</nav>
+
+	<!------ Include the above in your HEAD tag ---------->
+
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4>User Profile</h4>
+				</div>
+				<div class="panel-body">
+					<div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+						<img alt="User Pic"
+							src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
+							id="profile-image1" class="img-circle img-responsive">
+
+
+					</div>
+					<div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+						<div class="container">
+							<h2>John Doe</h2>
+						</div>
+						<hr>
+						<ul class="container details">
+							<li >
+							<div id="liEmail">
+									<span class="glyphicon glyphicon-envelope one"
+										style="width: 50px;"></span> 
+										<span id="emailUtente">somerandom@email.com</span>
+								</div>
+								<div id="modificaEmail" class="form-group">
+									<input type="email" class="form-control"
+										id="inputEmail" aria-describedby="emailHelp"
+										placeholder="Enter email">
+								</div>
+							<li>
+								<div  id="liPassword">
+									<span class="glyphicon glyphicon-lock one" style="width: 50px;"></span>
+									<span id="passwordUtente"> password </span>
+								</div>
+								<div id="modificaPassword" class="form-group">
+									<input type="email" class="form-control"
+										id="inputPassword" aria-describedby="emailHelp"
+										placeholder="Enter password">
+								</div>
+							</li>
+
+						</ul>
+						<div class="wrapper">
+							<button onclick="mostraBottoni()" style="margin-top: 20px;" type="button"
+								class="btn btn-success">Modifica</button>
+							<button onclick="confermaDati()" id="confermaModifiche" onclick="mostraBottoni()" style="margin-top: 20px;" type="button"
+								class="btn btn-success">Conferma</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer-->
+	<footer class="footer container-fluid text-center">
+
+		<p>TECHNOFARM v. 21.0.0 - LAL SRL con sede legale a New York</p>
+		<hr />
+		<div class="container">
+			<div class="row">
+				<div class="payments col-md-4">
+					<span>Contact us: support@Technofarm.com</span>
+				</div>
+
+				<div class="shipping  col-md-4">
+					<span>© Copyright 2018 Dynamic Drive. All Rights Reserved.</span>
+				</div>
+
+				<div class="social col-md-4">
+					<span>Seguici:</span> <a class="btn btn-social-icon btn-instagram">
+						<span style="color: #000000" class="fa fa-instagram"></span>
+					</a> <a class="btn btn-social-icon btn-facebook"> <span
+						style="color: #000000" class="fa fa-facebook"></span>
+					</a>
+
+				</div>
+			</div>
+		</div>
+
+
+	</footer>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="scripts/userpage.js"></script>
+</body>
+
+</html>

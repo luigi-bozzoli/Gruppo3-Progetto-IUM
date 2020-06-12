@@ -34,6 +34,6 @@ function validateForm() {
 function avvisa(x){
 	$("#errore").text(x);
 	$("#errore").fadeIn();
-	$("#errore").delay(3000).fadeOut();;
+	$("#errore").delay(3000).fadeOut();
 }
 
