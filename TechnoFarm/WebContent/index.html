@@ -29,7 +29,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Login</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -51,7 +51,7 @@
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button onclick="validateForm()" class="btn btn-default">Sign in</button>
+        <button onclick="validateForm()" class="btn btn-default">Login</button>
       </div>
     </div>
   </div>
@@ -64,12 +64,17 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Registrazione</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body mx-3">
+      <div style="margin-bottom: 18px;" class="md-form mb-5">
+          <i class="fa fa-user prefix grey-text"></i>
+          <input type="email"  id="nomeUtente" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-email">Nome Utente</label>
+        </div>
         <div class="md-form mb-5">
           <i class="fas fa-envelope prefix grey-text"></i>
           <input type="email" id="defaultForm-email1" class="form-control validate">
@@ -94,7 +99,7 @@
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button onclick="validateForm(controlla())" class="btn btn-default">Sign up</button>
+        <button onclick="validateForm(controlla())" class="btn btn-default">Registrazione</button>
       </div>
     </div>
   </div>
@@ -119,9 +124,11 @@
 			<div class="collapse navbar-collapse" id="navbar-collapse-main">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-					<a title="SIGN-IN" style="color: #F5DEB3" class="vociMenu" href="#" data-toggle="modal" data-target="#modalLoginForm"><i class="fas fa-user-lock"></i> </a>
+					<a onclick='return check(true)' title="Login" style="color: #F5DEB3" class="vociMenu" href="#" data-toggle="modal" data-target="#modalLoginForm"><i class="fas fa-user"></i> </a>
 					</li>				
-					<li><a title="SIGN-UP" style="color: #F5DEB3" class="vociMenu" href="#" data-toggle="modal" data-target="#modalRegistrazioneForm"> <i class="fas fa-user-plus"></i>
+					<li  id = "bottoneRegistrazione"><a title="Registrazione" style="color: #F5DEB3" class="vociMenu" href="#" data-toggle="modal" data-target="#modalRegistrazioneForm"> <i class="fas fa-user-plus"></i>
+					</a></li>
+					<li style="display: none;" id = "leMieSerre"><a  onclick='return check(false)' title="Le mie serre" style="color: #F5DEB3" class="vociMenu" href="#" data-toggle="modal" data-target="#modalLoginForm"> <i class="fa fa-pagelines"></i>
 					</a></li>
 				</ul>
 

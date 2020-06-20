@@ -40,8 +40,7 @@
 <body style="padding-top: 150px;">
 
 
-	<nav id="header" class="navbar navbar-default navbar-fixed-top"
-		role="navigation">
+<nav id = "header" class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 
 			<div class="navbar-header">
@@ -51,19 +50,13 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a id="logo" class="navbar-brand" href="index.html"><img
-					id="immagineLogo" class="img-rounded"
+				<a id="logo" class="navbar-brand" href="index.html"><img id="immagineLogo" class="img-rounded"
 					src="https://i.ibb.co/bFP8XmC/Logo2.png" alt="logo"></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="navbar-collapse-main">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a title="SIGN-IN" style="color: #F5DEB3" class="vociMenu"
-						href="#" data-toggle="modal" data-target="#modalLoginForm"><i
-							class="fas fa-user-lock"></i> </a></li>
-					<li><a title="SIGN-UP" style="color: #F5DEB3" class="vociMenu"
-						href="#" data-toggle="modal" data-target="#modalRegistrazioneForm">
-							<i class="fas fa-user-plus"></i>
+					<li ><a  onclick='leMieSerre()' title="Le mie serre" style="color: #F5DEB3" class="vociMenu" href="#" data-toggle="modal" data-target="#modalLoginForm"> <i class="fa fa-pagelines"></i>
 					</a></li>
 				</ul>
 
@@ -79,7 +72,7 @@
 		<div class="row">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h4>User Profile</h4>
+					<h4>Userpage</h4>
 				</div>
 				<div class="panel-body">
 					<div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
@@ -91,7 +84,7 @@
 					</div>
 					<div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
 						<div class="container">
-							<h2>John Doe</h2>
+							<h2 id="nomeUtente">John Snow</h2>
 						</div>
 						<hr>
 						<ul class="container details">
@@ -124,6 +117,8 @@
 								class="btn btn-success">Modifica</button>
 							<button onclick="confermaDati()" id="confermaModifiche" onclick="mostraBottoni()" style="margin-top: 20px;" type="button"
 								class="btn btn-success">Conferma</button>
+								<button onclick="logout()" style="margin-top: 20px;" type="button"
+								class="btn btn-success">Logout</button>
 						</div>
 					</div>
 
@@ -161,7 +156,18 @@
 	</footer>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="scripts/register.js"></script>
 	<script src="scripts/userpage.js"></script>
+	<script>
+function doUnload()
+{
+	
+	$("#nomeUtente").text(localStorage['nomeUtente'])
+	$("#emailUtente").text(localStorage['emailUtente']);
+	$("#passwordUtente").text(localStorage['passwordUtente']);
+}
+window.onload=doUnload()
+</script>
 </body>
 
 </html>
