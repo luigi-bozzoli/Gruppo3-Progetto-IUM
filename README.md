@@ -1,5 +1,18 @@
-# Progetto-IUM
+# TechnoFarm
 
->O buono Appollo, a l'ultimo lavoro<br/>
->fammi del tuo valor sì fatto vaso, <br/>
->come dimandi a dar l'amato alloro<br/>
+Front-end for the management of a smart farm developed
+
+## Languages and Tools
++ HTML
++ CSS
++ [Bootstrap](https://getbootstrap.com/)
++ JavaScript
++ IntelliJ IDEA
+
+## Contributors
+[Antonio Martucci](https://github.com/AntonioMartucci)\
+[Lucio Squitieri](https://github.com/Lucio-Squitieri)\
+[Nello01](https://github.com/Nello01)
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
